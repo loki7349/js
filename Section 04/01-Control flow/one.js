@@ -8,6 +8,7 @@
 //     console.log("temperature is greater than 50");
 // }
 // console.log("executed");
+//<, >, <=, >=, ==, !=, ===
 
 //if(3===  "3"){
 //    console.log(isUserloggegIn);
