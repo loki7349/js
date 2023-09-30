@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addlang(Langname){
+        const li=document.createElement('li')
+        li.innerHTML = `${Langname}`
+        document.querySelector('.language').
+        appendChild(li)
+    }
+    addlang("python")
+    addlang("typescript")
+//Optimised approach
+    function addOptiLanguage(Langname){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(Langname))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage('java')
+    addOptiLanguage('C++')
+
+    //-------------->Edit<---------------
+
+    const secLang=document.querySelector("li:nth-child(2)")
+    // secLang.innerHTML= "Mojo"
+
+    const newLi=document.createElement('li')
+    newLi.textContent = "mojo"
+    secLang.replaceWith(newLi)
+
+    const secLangu=document.querySelector("li:first-child")
+secLangu.outerHTML = "<li>Typescript</li>"
+
+
+//--------->remove<---------
+
+    const lastChild = document.querySelector('li:last-child')
+    lastChild.remove()
+</script>
+</html>
