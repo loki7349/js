@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM practise</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="capital">
+        <h2>City</h2>
+        <li>Banalore</li>
+        <li>Dehli</li>
+        <li>Hyderabad</li>
+        <li>Mumbai</li>
+
+
+    </ul>
+</body>
+<script>
+    function city(CityName){
+        const cap=document.createElement('cap')
+        cap.innerHTML = `${CityName}`
+        document.querySelector('.capital').appendChild(cap)
+    }
+    city("Chennai\n")
+    
+    city("Lucknow")
+    
+    const change=document.querySelector("cap:nth-child(2)")
+    change.innerHTML= "banaras"
+
+    const change1=document.createElement('cap')
+    change1.textContent="banaras"
+    change.replaceWith(change1)
+
+    const change=document.querySelector('cap:first-child')
+    change.outerHTML= "<cap>bidar</cap>"
+</script>
+</html>
