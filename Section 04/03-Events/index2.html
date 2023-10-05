@@ -11,16 +11,22 @@
     <button id="Stop">Stop</button>
 </body>
 <script>
-    // setInterval(function(){
-    //     console.log("loki", Date.now());
-    // }, 2000)
-        const satDate= function(str){
-            console.log(str, Date.now()); 
-        }
-    const intervalId=setInterval(satDate, 1000, "hii")
+    let inervalcount
+    const startcount= function(){
+    inervalcount=setInterval(function(){
+        console.log("loki", Date.now());
+    }, 2000)}
+    // const satDate= function(str){
+    //     console.log(str, Date.now()); 
+    // }
+    // const intervalId=setInterval(satDate, 1000, "hii")
 
-    clearInterval(intervalId)
+    const stopcout= function(){
+        clearInterval(inervalcount)
+    }
     //assignment to start print when clicking the ster button and stop
+    document.querySelector('#Start').addEventListener('click', startcount)
+    document.querySelector('#Stop').addEventListener('click', stopcout)
     
 </script>
 </html>
